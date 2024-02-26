@@ -87,6 +87,8 @@ namespace SecurityLibrary
         {
             Dictionary<char, char> map = new Dictionary<char, char>();
             StringBuilder x = new StringBuilder();
+            plainText = plainText.ToLower();
+            key = key.ToLower();
             string y;
             int c = 0;
             for (char i = 'a'; i <= 'z'; i++)
@@ -148,6 +150,7 @@ namespace SecurityLibrary
             Dictionary<char, int> map = new Dictionary<char, int>();
             Dictionary<char, char> mapped = new Dictionary<char, char>();
             StringBuilder z = new StringBuilder();
+            cipher=cipher.ToLower();
             string y;
             for (int i = 0; i < cipher.Length; i++)
             {

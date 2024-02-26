@@ -46,3 +46,9 @@ C:\Users\GIGABYTE\Downloads\MS_5-20230818T202552Z-001\MS_5\SecurityLibrary\obj\D
 C:\Users\GIGABYTE\Downloads\MS_5-20230818T202552Z-001\MS_5\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
 C:\Users\GIGABYTE\Downloads\MS_5-20230818T202552Z-001\MS_5\SecurityLibrary\obj\Debug\SecurityLibrary.dll
 C:\Users\GIGABYTE\Downloads\MS_5-20230818T202552Z-001\MS_5\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
+D:\FCIS\4th Year\Second Smester\Cyper Security\Project\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\bin\Debug\SecurityLibrary.dll
+D:\FCIS\4th Year\Second Smester\Cyper Security\Project\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\bin\Debug\SecurityLibrary.pdb
+D:\FCIS\4th Year\Second Smester\Cyper Security\Project\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.AssemblyReference.cache
+D:\FCIS\4th Year\Second Smester\Cyper Security\Project\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
+D:\FCIS\4th Year\Second Smester\Cyper Security\Project\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.dll
+D:\FCIS\4th Year\Second Smester\Cyper Security\Project\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
