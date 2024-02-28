@@ -35,8 +35,12 @@ namespace SecurityLibrary
                 cipher[i] = arr[index];
 
             }
-
-            return cipher.ToString().ToUpper();
+            string result ="";
+            for (int i = 0;i<plainText.Length;i++)
+            {
+                result += cipher[i];
+            }
+            return result;
         }
 
         public string Decrypt(string cipherText, int key)
@@ -49,11 +53,22 @@ namespace SecurityLibrary
             {
                 x = search(cipherText[i]);
                 index = (x - key) % 26;
+                 if(index < 0)
+                {
+
+                    index = 26+index;
+                    
+                }
+                
                 plain[i] = arr[index];
 
             }
-
-            return plain.ToString().ToUpper();
+            string result = "";
+            for (int i = 0; i < cipherText.Length; i++)
+            {
+                result += plain[i];
+            }
+            return result;
 
         }
 
@@ -65,6 +80,12 @@ namespace SecurityLibrary
             int x1 = search(plainText[0]);
             int x2 = search(cipherText[0]);
             result = x1 - x2;
+            if (x1 > x2)
+            {
+                result = 26 - result;
+            }
+           
+            
             if (result >= 0)
             {
                 return result;

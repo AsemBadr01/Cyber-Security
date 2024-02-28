@@ -52,3 +52,9 @@ D:\FCIS\4th Year\Second Smester\Cyper Security\Project\Cyber-Security\SecurityPa
 D:\FCIS\4th Year\Second Smester\Cyper Security\Project\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
 D:\FCIS\4th Year\Second Smester\Cyper Security\Project\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.dll
 D:\FCIS\4th Year\Second Smester\Cyper Security\Project\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
+C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\bin\Debug\SecurityLibrary.dll
+C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\bin\Debug\SecurityLibrary.pdb
+C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.AssemblyReference.cache
+C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.dll
+C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
