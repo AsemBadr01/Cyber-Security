@@ -88,3 +88,12 @@ C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\Security
 C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
 C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
 C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\bin\Debug\SecurityPackageTest.dll
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\bin\Debug\SecurityPackageTest.pdb
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\bin\Debug\SecurityLibrary.dll
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\bin\Debug\SecurityLibrary.pdb
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.AssemblyReference.cache
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CoreCompileInputs.cache
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb

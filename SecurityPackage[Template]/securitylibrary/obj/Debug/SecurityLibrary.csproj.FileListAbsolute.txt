@@ -58,3 +58,9 @@ C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\Security
 C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.dll
 C:\Users\DELL\Documents\GitHub\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\bin\Debug\SecurityLibrary.dll
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\bin\Debug\SecurityLibrary.pdb
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.AssemblyReference.cache
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.dll
+C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
