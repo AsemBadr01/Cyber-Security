@@ -98,32 +98,33 @@ namespace SecurityLibrary
                 s = cipherText[i + 1];
                 result.Append(toplain(f, s, keytable, sub));
             }
-
-            for (int i = 0; i < result.Length; i++)
+            char t;
+            for (int i = 0; i < result.Length; i += 2)
             {
-                if (i == result.Length - 1)
+                if (i == result.Length - 2)
                 {
-                    if (result[i] != 'x')
+                    f = result[i];
+                    s = result[i + 1];
+                    resultt.Append(f);
+                    if (s == 'x' && result.Length % 2 != 0 || s != 'x')
                     {
-                        resultt.Append(result[i]);
-                    }
-                    else
-                    {
-                        if (result.Length % 2 != 0)
-                        {
-                            resultt.Append(result[i]);
-                        }
+                        resultt.Append(s);
                     }
                 }
                 else
                 {
-                    if (result[i] == 'x' && result[i - 1] == result[i + 1])
+                    f = result[i];
+                    s = result[i + 1];
+                    t = result[i + 2];
+                    if (s == 'x' && f == t)
                     {
+                        resultt.Append(f);
                         continue;
                     }
                     else
                     {
-                        resultt.Append(result[i]);
+                        resultt.Append(f);
+                        resultt.Append(s);
                     }
                 }
             }
