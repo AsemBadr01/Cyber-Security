@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SecurityLibrary
 {
@@ -19,10 +16,10 @@ namespace SecurityLibrary
         {
             throw new NotImplementedException();
         }
-        
+
         public List<int> Decrypt(List<int> cipherText, List<int> key)
         {
-            
+
             throw new NotImplementedException();
         }
         public string Decrypt(string cipherText, string key)
@@ -33,7 +30,30 @@ namespace SecurityLibrary
 
         public List<int> Encrypt(List<int> plainText, List<int> key)
         {
-            throw new NotImplementedException();
+            int plaincount = 0, keycount = 0, sum = 0;
+            int m = (int)Math.Sqrt(key.Count);
+            List<int> result = new List<int>();
+
+
+            while (plaincount < plainText.Count)
+            {
+                List<int> pt = plainText.GetRange(plaincount, m);
+                while (keycount < key.Count)
+                {
+                    List<int> ky = key.GetRange(keycount, m);
+                    for (int i = 0; i < m; i++)
+                    {
+                        sum += (pt[i] * ky[i]);
+                    }
+                    result.Add(sum % 26);
+                    keycount += m;
+                    sum = 0;
+                }
+                plaincount += m;
+                keycount = 0;
+            }
+
+            return result;
         }
         public string Encrypt(string plainText, string key)
         {
