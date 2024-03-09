@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SecurityPackage[Template]",
+    "\\SecurityPackage[Template]\\securitylibrary",
+    "\\SecurityPackage[Template]\\securitylibrary\\MainAlgorithms"
+  ],
+  "SelectedNode": "\\SecurityPackage[Template]\\securitylibrary\\MainAlgorithms\\PlayFair.cs",
+  "PreviewInSolutionExplorer": false
+}
