@@ -97,6 +97,7 @@ C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageT
 C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
 C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
 C:\Users\Uosef\Desktop\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb
+<<<<<<< HEAD
 D:\Development\AsemBadr01\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\bin\Debug\SecurityPackageTest.dll
 D:\Development\AsemBadr01\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\bin\Debug\SecurityPackageTest.pdb
 D:\Development\AsemBadr01\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\bin\Debug\SecurityLibrary.dll
@@ -106,3 +107,14 @@ D:\Development\AsemBadr01\Cyber-Security\SecurityPackage[Template]\SecurityPacka
 D:\Development\AsemBadr01\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\Security.174D7A11.Up2Date
 D:\Development\AsemBadr01\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
 D:\Development\AsemBadr01\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb
+=======
+D:\College\Fourth year\second term\Cyber security\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\bin\Debug\SecurityPackageTest.dll
+D:\College\Fourth year\second term\Cyber security\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\bin\Debug\SecurityPackageTest.pdb
+D:\College\Fourth year\second term\Cyber security\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\bin\Debug\SecurityLibrary.dll
+D:\College\Fourth year\second term\Cyber security\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\bin\Debug\SecurityLibrary.pdb
+D:\College\Fourth year\second term\Cyber security\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.AssemblyReference.cache
+D:\College\Fourth year\second term\Cyber security\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CoreCompileInputs.cache
+D:\College\Fourth year\second term\Cyber security\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
+D:\College\Fourth year\second term\Cyber security\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
+D:\College\Fourth year\second term\Cyber security\Cyber-Security\SecurityPackage[Template]\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb
+>>>>>>> 6638384a49870369b00ef60cde89efbbc4f27327
