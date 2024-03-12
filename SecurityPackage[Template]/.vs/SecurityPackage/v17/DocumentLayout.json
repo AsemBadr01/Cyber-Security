@@ -1,23 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Development\\AsemBadr01\\Cyber-Security\\SecurityPackage[Template]\\",
+  "WorkspaceRootPath": "D:\\FCIS\\4th Year\\Second Smester\\Cyper Security\\Project\\Cyber-Security\\SecurityPackage[Template]\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{64AFBAE4-208F-4F5D-B9F4-CCA2E71F36E4}|SecurityLibrary\\SecurityLibrary.csproj|d:\\development\\asembadr01\\cyber-security\\securitypackage[template]\\securitylibrary\\mainalgorithms\\playfair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64AFBAE4-208F-4F5D-B9F4-CCA2E71F36E4}|SecurityLibrary\\SecurityLibrary.csproj|solutionrelative:securitylibrary\\mainalgorithms\\playfair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4638FC66-5518-485D-A541-D0A6044730B0}|SecurityPackageTest\\SecurityPackageTest.csproj|D:\\Development\\AsemBadr01\\Cyber-Security\\SecurityPackage[Template]\\securitypackagetest\\playfairtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4638FC66-5518-485D-A541-D0A6044730B0}|SecurityPackageTest\\SecurityPackageTest.csproj|solutionrelative:securitypackagetest\\playfairtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
       "AbsoluteMoniker": "D:0:0:{64AFBAE4-208F-4F5D-B9F4-CCA2E71F36E4}|SecurityLibrary\\SecurityLibrary.csproj|D:\\FCIS\\4th Year\\Second Smester\\Cyper Security\\Project\\Cyber-Security\\SecurityPackage[Template]\\securitylibrary\\mainalgorithms\\hillcipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64AFBAE4-208F-4F5D-B9F4-CCA2E71F36E4}|SecurityLibrary\\SecurityLibrary.csproj|solutionrelative:securitylibrary\\mainalgorithms\\hillcipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4638FC66-5518-485D-A541-D0A6044730B0}|SecurityPackageTest\\SecurityPackageTest.csproj|d:\\fcis\\4th year\\second smester\\cyper security\\project\\cyber-security\\securitypackage[template]\\securitypackagetest\\hillciphertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4638FC66-5518-485D-A541-D0A6044730B0}|SecurityPackageTest\\SecurityPackageTest.csproj|solutionrelative:securitypackagetest\\hillciphertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -27,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,48 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-<<<<<<< Updated upstream
-              "Title": "PlayfairTest.cs",
-              "DocumentMoniker": "D:\\Development\\AsemBadr01\\Cyber-Security\\SecurityPackage[Template]\\securitypackagetest\\PlayfairTest.cs",
-              "RelativeDocumentMoniker": "securitypackagetest\\PlayfairTest.cs",
-              "ToolTip": "D:\\Development\\AsemBadr01\\Cyber-Security\\SecurityPackage[Template]\\securitypackagetest\\PlayfairTest.cs",
-              "RelativeToolTip": "securitypackagetest\\PlayfairTest.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAsAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-01T11:48:58.025Z"
-=======
-              "Title": "HillCipherTest.cs",
-              "DocumentMoniker": "D:\\FCIS\\4th Year\\Second Smester\\Cyper Security\\Project\\Cyber-Security\\SecurityPackage[Template]\\securitypackagetest\\HillCipherTest.cs",
-              "RelativeDocumentMoniker": "securitypackagetest\\HillCipherTest.cs",
-              "ToolTip": "D:\\FCIS\\4th Year\\Second Smester\\Cyper Security\\Project\\Cyber-Security\\SecurityPackage[Template]\\securitypackagetest\\HillCipherTest.cs",
-              "RelativeToolTip": "securitypackagetest\\HillCipherTest.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T16:54:09.295Z",
-              "EditorCaption": ""
->>>>>>> Stashed changes
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-<<<<<<< Updated upstream
-              "Title": "PlayFair.cs",
-              "DocumentMoniker": "D:\\Development\\AsemBadr01\\Cyber-Security\\SecurityPackage[Template]\\securitylibrary\\MainAlgorithms\\PlayFair.cs",
-              "RelativeDocumentMoniker": "securitylibrary\\MainAlgorithms\\PlayFair.cs",
-              "ToolTip": "D:\\Development\\AsemBadr01\\Cyber-Security\\SecurityPackage[Template]\\securitylibrary\\MainAlgorithms\\PlayFair.cs",
-              "RelativeToolTip": "securitylibrary\\MainAlgorithms\\PlayFair.cs",
-              "ViewState": "AQIAAIwBAAAAAAAAAAAAAHMAAAAiAAAA",
-=======
               "Title": "HillCipher.cs",
               "DocumentMoniker": "D:\\FCIS\\4th Year\\Second Smester\\Cyper Security\\Project\\Cyber-Security\\SecurityPackage[Template]\\securitylibrary\\MainAlgorithms\\HillCipher.cs",
               "RelativeDocumentMoniker": "securitylibrary\\MainAlgorithms\\HillCipher.cs",
               "ToolTip": "D:\\FCIS\\4th Year\\Second Smester\\Cyper Security\\Project\\Cyber-Security\\SecurityPackage[Template]\\securitylibrary\\MainAlgorithms\\HillCipher.cs",
               "RelativeToolTip": "securitylibrary\\MainAlgorithms\\HillCipher.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAwwK0AAABLAAAA",
->>>>>>> Stashed changes
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T21:47:32.196Z",
+              "WhenOpened": "2024-03-11T22:36:48.069Z",
               "EditorCaption": ""
             }
           ]
