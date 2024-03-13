@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Linq;
 
 namespace SecurityLibrary
 {
@@ -173,14 +174,11 @@ namespace SecurityLibrary
 
         public List<int> Analyse(List<int> plainText, List<int> cipherText)
         {
-            List<int> inverse = new List<int>();
-            List<int> fcp;
-            List<int> scp;
-            List<int> cipher = new List<int>();
+            List<int> inverse, fcp, scp, cipher;
             List<int> result = new List<int>();
             List<int> fp = new List<int>();
 
-            int column = plainText.Count / 2, det, b = 0, sum = 0, findex = 0, sindex = 0, count = 0, iterate = 0;
+            int column = plainText.Count / 2, det, b = 0, sum = 0, findex = 0, sindex = 0, count = 0, iterate;
             int[,] twodarray = new int[2, column];
             bool x = false;
 
@@ -228,18 +226,7 @@ namespace SecurityLibrary
                 inverse = Inv(b, fp);
                 fcp = cipherText.GetRange(findex, 2);
                 scp = cipherText.GetRange(sindex, 2);
-
-                for (int i = 0; i < 4; i++)
-                {
-                    if (i < 2)
-                    {
-                        cipher.Add(fcp[i]);
-                    }
-                    else
-                    {
-                        cipher.Add(scp[i - 2]);
-                    }
-                }
+                cipher = fcp.Concat(scp).ToList();
 
                 for (int i = 0; i < 2; i++)
                 {
