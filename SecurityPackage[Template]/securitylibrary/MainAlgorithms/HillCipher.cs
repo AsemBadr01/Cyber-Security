@@ -195,15 +195,18 @@ namespace SecurityLibrary
                         fp.Add(sp[j]);
                     }
                     det = det2x2(fp);
-                    for (int i = 0; i < 26; i++)
+                    if (GCDCheck(det))
                     {
-                        if ((i * det) % 26 == 1)
+                        for (int i = 0; i < 26; i++)
                         {
-                            b = i;
-                            x = true;
-                            findex = index1;
-                            sindex = index2;
-                            break;
+                            if ((i * det) % 26 == 1)
+                            {
+                                b = i;
+                                x = true;
+                                findex = index1;
+                                sindex = index2;
+                                break;
+                            }
                         }
                     }
                     if (x)
@@ -352,7 +355,6 @@ namespace SecurityLibrary
             List<int> result = new List<int> { key[3] * b, key[1] * b * -1, key[2] * b * -1, key[0] * b };
             return result;
         }
-
         public List<int> Inverse3x3(List<int> key)
         {
             for (int i = 0; i < key.Count; i++)
@@ -571,6 +573,26 @@ namespace SecurityLibrary
                 {
                     throw new InvalidAnlysisException();
                 }
+            }
+        }
+        public bool GCDCheck(int det)
+        {
+            bool x = true;
+            for (int i = 1; i < 26; i++)
+            {
+                if (det % i == 0 && 26 % i == 0 && i > 1)
+                {
+                    x = false;
+                    break;
+                }
+            }
+            if (!x)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
     }
