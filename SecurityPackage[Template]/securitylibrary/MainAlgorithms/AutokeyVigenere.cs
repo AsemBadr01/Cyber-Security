@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,6 @@ namespace SecurityLibrary
     {
         public string Analyse(string plainText, string cipherText)
         {
-
             plainText = plainText.ToUpper();
             cipherText = cipherText.ToUpper();
             Dictionary<int, char> numtoletter = new Dictionary<int, char>();
@@ -32,9 +31,34 @@ namespace SecurityLibrary
             {
                 result += numtoletter[result_int[i]];
             }
-            var le = plainText.Substring(0, 2);
-            var res = result.Split(le.ToCharArray());
-            return res[0];
+
+            int key_cutting_index = 0;
+            for (int i = 1; i < result.Length; i++)
+            {
+                bool sequence = false;
+
+                if (result[i] == plainText[0])
+                {
+                    sequence = true;
+
+                    for (int j = 0; j < plainText.Length - i; j++)
+                    {
+                        if (result[i + j] != plainText[j])
+                        {
+                            sequence = false;
+                            break;
+                        }
+                    }
+                    if (sequence)
+                    {
+                        key_cutting_index = i;
+                    }
+                }
+            }
+            string res = result.Substring(0, key_cutting_index);
+            res = res.ToLower();
+
+            return res;
         }
 
         public string Decrypt(string cipherText, string key)
