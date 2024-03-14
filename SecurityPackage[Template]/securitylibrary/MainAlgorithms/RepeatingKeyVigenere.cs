@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -32,10 +32,39 @@ namespace SecurityLibrary
             {
                 result += numtoletter[result_int[i]];
             }
-            char[] le = result.Substring(0, 2).ToCharArray();
-            var res = result.Split(le);
-            string final = $"{le}{res[1]}";
-            return final.ToLower();
+
+            int key_cutting_index = 0;
+            int repeated_key = 0;
+            bool sequence;
+            for (int i = 1; i < result.Length; i++)
+            {
+                repeated_key = i;
+                sequence = true;
+
+                if (result[i] == result[0])
+                {
+
+                    for (int j = 0; j < i; j++, repeated_key++)
+                    {
+                        if (result[repeated_key] != result[j])
+                        {
+                            sequence = false;
+                            break;
+                        }
+                    }
+                    if (sequence)
+                    {
+                        key_cutting_index = i;
+                        break;
+                    }
+                }
+
+            }
+
+            string res = result.Remove(key_cutting_index);
+            res = res.ToLower();
+
+            return res;
         }
 
 
