@@ -14,7 +14,19 @@ namespace SecurityLibrary.DES
     {
         public override string Decrypt(string cipherText, string key)
         {
-            throw new NotImplementedException();
+            key = key.Substring(2);
+            long decimalKeyNumber = Convert.ToInt64(key, 16);
+            string binaryKeyText = Convert.ToString(decimalKeyNumber, 2).PadLeft(64, '0');
+            string keyPermuted = permutaionChoice(binaryKeyText, pc_1, 8, 7);
+            string c = keyPermuted.Substring(0, 28);
+            string d = keyPermuted.Substring(28);
+            string permutedPlain = "";
+            string l = "";
+            string r = "";
+            string l1 = "";
+            string l11 = "";
+            int counter = 0;
+            return "";
         }
 
         int[,] pc_1 = new int[,]
@@ -82,7 +94,6 @@ namespace SecurityLibrary.DES
     { 13,  6,  4,  9,  8, 15,  3,  0, 11,  1,  2, 12,  5, 10, 14,  7 },
     {  1, 15, 13,  8, 10,  3,  7,  4, 12,  5,  6, 11,  0, 14,  9,  2 }
 };
-
         int[,] s4 = new int[4, 16]
         {
     {  7, 13, 14,  3,  0,  6,  9, 10,  1,  2,  8,  5, 11, 12,  4, 15 },
@@ -97,7 +108,6 @@ namespace SecurityLibrary.DES
     {  4,  2,  1, 11, 10, 13,  7,  8, 15,  9, 12,  5,  6,  3,  0, 14 },
     { 11,  8, 12,  7,  1, 14,  2, 13,  6, 15,  0,  9, 10,  4,  5,  3 }
 };
-
         int[,] s6 = new int[4, 16]
         {
     { 12,  1, 10, 15,  9,  2,  6,  8,  0, 13,  3,  4, 14,  7,  5, 11 },
