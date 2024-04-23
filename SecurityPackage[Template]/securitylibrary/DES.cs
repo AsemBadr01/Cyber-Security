@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SecurityLibrary.DES
 {
@@ -282,7 +277,7 @@ namespace SecurityLibrary.DES
             string l = "";
             string r = "";
             string l1 = "";
-            string l11 = "";
+            string r1 = "";
             int counter = 0;
             for (int i = 0; i < 16; i++)
             {
@@ -309,20 +304,12 @@ namespace SecurityLibrary.DES
                 string sub = subBytes(xorResult);
 
                 string p = permutaionChoice(sub, pMatrix, 8, 4);
-                if (i == 0)
-                {
-                    r = xOr(p, l);
-                    l11 = r;
-                }
-                else
-                {
-                    r = xOr(p, l1);
-                    l11 = r;
-                }
+
+                r1 = xOr(p, l);
 
 
             }
-            string rees = r + l11;
+            string rees = r1 + l1;
             string binaryCipher = permutaionChoice(rees, IP_1_Matrix, 8, 8);
 
             for (int i = 0; i < binaryCipher.Length; i += 4)
