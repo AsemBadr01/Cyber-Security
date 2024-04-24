@@ -254,13 +254,21 @@ namespace SecurityLibrary.DES
 
             return result;
         }
+        string F(string R0,string k)
+        {
+           string e = permutaionChoice(R0, e_bit, 8, 6);
+            string xorResult = xOr(k, e);
+            string s = subBytes(xorResult);
+            string f = permutaionChoice(s, pMatrix, 8, 4);
+            return f;
+        }
 
         public override string Encrypt(string plainText, string key)
         {
             string cipherText = "";
 
             plainText = plainText.Substring(2);
-            key = key.Substring(2);
+            key=key.Substring(2);
 
             long decimalPlainNumber = Convert.ToInt64(plainText, 16);
             long decimalKeyNumber = Convert.ToInt64(key, 16);
@@ -271,50 +279,35 @@ namespace SecurityLibrary.DES
 
             string keyPermuted = permutaionChoice(binaryKeyText, pc_1, 8, 7);
 
-            string c = keyPermuted.Substring(0, 28);
+            string c = keyPermuted.Substring(0,28);
             string d = keyPermuted.Substring(28);
             string permutedPlain = "";
-            string l = "";
-            string r = "";
+            string l0="";
+            string r0="";
             string l1 = "";
-            string r1 = "";
-            int counter = 0;
+            string f;
+            int counter=0;
+                      
+            permutedPlain = permutaionChoice(binaryPlainText, ipMatrix, 8, 8);
+            l0 = permutedPlain.Substring(0, 32);
+            r0 = permutedPlain.Substring(32);
             for (int i = 0; i < 16; i++)
             {
                 counter += shift[i];
                 string shiftedKey = shiftKey(c, d, counter);
                 string resultPC2 = permutaionChoice(shiftedKey, pc_2, 8, 6);
-
-                if (i == 0)
-                {
-                    permutedPlain = permutaionChoice(binaryPlainText, ipMatrix, 8, 8);
-                }
-                else
-                {
-                    permutedPlain = permutaionChoice(permutedPlain, ipMatrix, 8, 8);
-                }
-
-                l = permutedPlain.Substring(0, 32);
-                r = permutedPlain.Substring(32);
-
-                l1 = r;
-                string e = permutaionChoice(r, e_bit, 8, 6);
-
-                string xorResult = xOr(resultPC2, e);
-                string sub = subBytes(xorResult);
-
-                string p = permutaionChoice(sub, pMatrix, 8, 4);
-
-                r1 = xOr(p, l);
-
-
+                f = F(r0, resultPC2);
+                l1 = r0;
+                r0 = xOr(l0, f);
+                l0 = l1;
             }
-            string rees = r1 + l1;
-            string binaryCipher = permutaionChoice(rees, IP_1_Matrix, 8, 8);
+            
+            string rees = r0 + l0;
+            string binaryCipher=permutaionChoice(rees,IP_1_Matrix, 8, 8);
 
-            for (int i = 0; i < binaryCipher.Length; i += 4)
+            for(int i = 0; i < binaryCipher.Length; i += 4)
             {
-                string x = binaryCipher.Substring(i, 4);
+                string x=binaryCipher.Substring(i,4);
                 int index = Array.IndexOf(hexColumn, x);
                 if (index == 10)
                 {
@@ -334,7 +327,7 @@ namespace SecurityLibrary.DES
                 }
                 else if (index == 14)
                 {
-                    cipherText += "C";
+                    cipherText += "E";
                 }
                 else if (index == 15)
                 {
@@ -347,7 +340,7 @@ namespace SecurityLibrary.DES
 
             }
 
-            return "0x" + cipherText;
+            return "0x" +cipherText;
         }
     }
 }
