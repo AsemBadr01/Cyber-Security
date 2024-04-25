@@ -83,12 +83,12 @@ namespace SecurityLibrary.DES
     { 13,  8, 10,  1,  3, 15,  4,  2, 11,  6,  7, 12,  0,  5, 14,  9 }
 };
         int[,] s3 = new int[4, 16]
-{
+        {
     { 10,  0,  9, 14,  6,  3, 15,  5,  1, 13, 12,  7, 11,  4,  2,  8 },
     { 13,  7,  0,  9,  3,  4,  6, 10,  2,  8,  5, 14, 12, 11, 15,  1 },
     { 13,  6,  4,  9,  8, 15,  3,  0, 11,  1,  2, 12,  5, 10, 14,  7 },
-    {  1, 15, 13,  8, 10,  3,  7,  4, 12,  5,  6, 11,  0, 14,  9,  2 }
-};
+    {  1, 10, 13,  0, 6,  9,  8,  7, 4,  15,  14, 3,  11, 5,  2,  12 }
+        };
         int[,] s4 = new int[4, 16]
         {
     {  7, 13, 14,  3,  0,  6,  9, 10,  1,  2,  8,  5, 11, 12,  4, 15 },
@@ -254,9 +254,9 @@ namespace SecurityLibrary.DES
 
             return result;
         }
-        string F(string R0,string k)
+        string F(string R0, string k)
         {
-           string e = permutaionChoice(R0, e_bit, 8, 6);
+            string e = permutaionChoice(R0, e_bit, 8, 6);
             string xorResult = xOr(k, e);
             string s = subBytes(xorResult);
             string f = permutaionChoice(s, pMatrix, 8, 4);
@@ -268,7 +268,7 @@ namespace SecurityLibrary.DES
             string cipherText = "";
 
             plainText = plainText.Substring(2);
-            key=key.Substring(2);
+            key = key.Substring(2);
 
             long decimalPlainNumber = Convert.ToInt64(plainText, 16);
             long decimalKeyNumber = Convert.ToInt64(key, 16);
@@ -279,18 +279,19 @@ namespace SecurityLibrary.DES
 
             string keyPermuted = permutaionChoice(binaryKeyText, pc_1, 8, 7);
 
-            string c = keyPermuted.Substring(0,28);
+            string c = keyPermuted.Substring(0, 28);
             string d = keyPermuted.Substring(28);
             string permutedPlain = "";
-            string l0="";
-            string r0="";
+            string l0 = "";
+            string r0 = "";
             string l1 = "";
             string f;
-            int counter=0;
-                      
+            int counter = 0;
+
             permutedPlain = permutaionChoice(binaryPlainText, ipMatrix, 8, 8);
             l0 = permutedPlain.Substring(0, 32);
             r0 = permutedPlain.Substring(32);
+
             for (int i = 0; i < 16; i++)
             {
                 counter += shift[i];
@@ -301,13 +302,13 @@ namespace SecurityLibrary.DES
                 r0 = xOr(l0, f);
                 l0 = l1;
             }
-            
-            string rees = r0 + l0;
-            string binaryCipher=permutaionChoice(rees,IP_1_Matrix, 8, 8);
 
-            for(int i = 0; i < binaryCipher.Length; i += 4)
+            string rees = r0 + l0;
+            string binaryCipher = permutaionChoice(rees, IP_1_Matrix, 8, 8);
+
+            for (int i = 0; i < binaryCipher.Length; i += 4)
             {
-                string x=binaryCipher.Substring(i,4);
+                string x = binaryCipher.Substring(i, 4);
                 int index = Array.IndexOf(hexColumn, x);
                 if (index == 10)
                 {
@@ -340,7 +341,7 @@ namespace SecurityLibrary.DES
 
             }
 
-            return "0x" +cipherText;
+            return "0x" + cipherText;
         }
     }
 }
