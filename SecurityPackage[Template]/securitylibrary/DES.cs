@@ -1,4 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SecurityLibrary.DES
 {
@@ -17,7 +23,6 @@ namespace SecurityLibrary.DES
             long decimalPlainNumber = Convert.ToInt64(cipherText, 16);
             long decimalKeyNumber = Convert.ToInt64(key, 16);
 
-            // Convert long to binary
             string binaryCypherText = Convert.ToString(decimalPlainNumber, 2).PadLeft(64, '0');
             string binaryKeyText = Convert.ToString(decimalKeyNumber, 2).PadLeft(64, '0');
 
@@ -26,16 +31,16 @@ namespace SecurityLibrary.DES
             string c = keyPermuted.Substring(0, 28);
             string d = keyPermuted.Substring(28);
 
-          string  permutedPlain = permutaionChoice(binaryCypherText, ipMatrix, 8, 8);
-           string l0 = permutedPlain.Substring(0, 32);
-          string  r0 = permutedPlain.Substring(32);
+            string permutedPlain = permutaionChoice(binaryCypherText, ipMatrix, 8, 8);
+            string l0 = permutedPlain.Substring(0, 32);
+            string r0 = permutedPlain.Substring(32);
             int counter = 0;
             string f;
             string l1;
             int k = 15;
             string[] keys = new string[16];
             string keyNum;
-            for (int i=0;i<16;i++)
+            for (int i = 0; i < 16; i++)
             {
                 counter += shift[i];
                 keys[i] = shiftKey(c, d, counter);
@@ -89,18 +94,19 @@ namespace SecurityLibrary.DES
                 }
 
             }
-            return "0x"+plainText;
+            return "0x" + plainText;
         }
 
         int[,] pc_1 = new int[,]
-        { {57,49,41,33,25,17,9 },
-          {1,58,50,42,34,26,18 },
-          {10,2,59,51,43,35,27 },
-          {19,11,3,60,52,44,36 },
-          {63,55,47,39,31,23,15 },
-          {7,62,56,46,38,30,22 },
-          {14,6,61,53,45,37,29 },
-          {21,13,5,28,20,12,4 }
+        {
+        {57, 49, 41, 33, 25, 17,  9},
+        { 1, 58, 50, 42, 34, 26, 18},
+        {10,  2, 59, 51, 43, 35, 27},
+        {19, 11,  3, 60, 52, 44, 36},
+        {63, 55, 47, 39, 31, 23, 15},
+        { 7, 62, 54, 46, 38, 30, 22},
+        {14,  6, 61, 53, 45, 37, 29},
+        {21, 13,  5, 28, 20, 12,  4}
         };
         int[] shift = new int[] { 1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1 };
         int[,] pc_2 = new int[,]
@@ -127,14 +133,14 @@ namespace SecurityLibrary.DES
         };
         int[,] e_bit = new int[,]
         {
-               { 32,  1,  2,  3,  4,  5 },
-    {  4,  5,  6,  7,  8,  9 },
-    {  8,  9, 10, 11, 12, 13 },
-    { 12, 13, 14, 15, 16, 17 },
-    { 16, 17, 18, 19, 20, 21 },
-    { 20, 21, 22, 23, 24, 25 },
-    { 24, 25, 26, 27, 28, 29 },
-    { 28, 29, 30, 31, 32,  1 }
+            { 32,  1,  2,  3,  4,  5 },
+            {  4,  5,  6,  7,  8,  9 },
+            {  8,  9, 10, 11, 12, 13 },
+            { 12, 13, 14, 15, 16, 17 },
+            { 16, 17, 18, 19, 20, 21 },
+            { 20, 21, 22, 23, 24, 25 },
+            { 24, 25, 26, 27, 28, 29 },
+            { 28, 29, 30, 31, 32,  1 }
         };
         int[,] s1 = new int[,]
         {
@@ -171,6 +177,7 @@ namespace SecurityLibrary.DES
     {  4,  2,  1, 11, 10, 13,  7,  8, 15,  9, 12,  5,  6,  3,  0, 14 },
     { 11,  8, 12,  7,  1, 14,  2, 13,  6, 15,  0,  9, 10,  4,  5,  3 }
 };
+
         int[,] s6 = new int[4, 16]
         {
     { 12,  1, 10, 15,  9,  2,  6,  8,  0, 13,  3,  4, 14,  7,  5, 11 },
@@ -322,6 +329,7 @@ namespace SecurityLibrary.DES
 
             return result;
         }
+
         string F(string R0, string k)
         {
             string e = permutaionChoice(R0, e_bit, 8, 6);
@@ -359,7 +367,6 @@ namespace SecurityLibrary.DES
             permutedPlain = permutaionChoice(binaryPlainText, ipMatrix, 8, 8);
             l0 = permutedPlain.Substring(0, 32);
             r0 = permutedPlain.Substring(32);
-
             for (int i = 0; i < 16; i++)
             {
                 counter += shift[i];
