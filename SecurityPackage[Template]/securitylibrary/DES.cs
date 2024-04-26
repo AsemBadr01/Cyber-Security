@@ -9,19 +9,87 @@ namespace SecurityLibrary.DES
     {
         public override string Decrypt(string cipherText, string key)
         {
+            string plainText = "";
+
+            cipherText = cipherText.Substring(2);
             key = key.Substring(2);
+
+            long decimalPlainNumber = Convert.ToInt64(cipherText, 16);
             long decimalKeyNumber = Convert.ToInt64(key, 16);
+
+            // Convert long to binary
+            string binaryCypherText = Convert.ToString(decimalPlainNumber, 2).PadLeft(64, '0');
             string binaryKeyText = Convert.ToString(decimalKeyNumber, 2).PadLeft(64, '0');
+
             string keyPermuted = permutaionChoice(binaryKeyText, pc_1, 8, 7);
+
             string c = keyPermuted.Substring(0, 28);
             string d = keyPermuted.Substring(28);
-            string permutedPlain = "";
-            string l = "";
-            string r = "";
-            string l1 = "";
-            string l11 = "";
+
+          string  permutedPlain = permutaionChoice(binaryCypherText, ipMatrix, 8, 8);
+           string l0 = permutedPlain.Substring(0, 32);
+          string  r0 = permutedPlain.Substring(32);
             int counter = 0;
-            return "";
+            string f;
+            string l1;
+            int k = 15;
+            string[] keys = new string[16];
+            string keyNum;
+            for (int i=0;i<16;i++)
+            {
+                counter += shift[i];
+                keys[i] = shiftKey(c, d, counter);
+            }
+            for (int i = 0; i < 16; i++)
+            {
+                keyNum = keys[k];
+                k--;
+                string resultPC2 = permutaionChoice(keyNum, pc_2, 8, 6);
+                f = F(r0, resultPC2);
+                l1 = r0;
+                r0 = xOr(l0, f);
+                l0 = l1;
+            }
+
+
+            string rees = r0 + l0;
+            string binaryPlain = permutaionChoice(rees, IP_1_Matrix, 8, 8);
+
+            for (int i = 0; i < binaryPlain.Length; i += 4)
+            {
+                string x = binaryPlain.Substring(i, 4);
+                int index = Array.IndexOf(hexColumn, x);
+                if (index == 10)
+                {
+                    plainText += "A";
+                }
+                else if (index == 11)
+                {
+                    plainText += "B";
+                }
+                else if (index == 12)
+                {
+                    plainText += "C";
+                }
+                else if (index == 13)
+                {
+                    plainText += "D";
+                }
+                else if (index == 14)
+                {
+                    plainText += "E";
+                }
+                else if (index == 15)
+                {
+                    plainText += "F";
+                }
+                else
+                {
+                    plainText += index;
+                }
+
+            }
+            return "0x"+plainText;
         }
 
         int[,] pc_1 = new int[,]
