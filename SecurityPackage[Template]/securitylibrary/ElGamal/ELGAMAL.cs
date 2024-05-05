@@ -1,8 +1,6 @@
-﻿using System;
+﻿using SecurityLibrary.AES;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace SecurityLibrary.ElGamal
 {
@@ -20,16 +18,59 @@ namespace SecurityLibrary.ElGamal
 
         public List<long> Encrypt(int q, int alpha, int y, int k, int m)
         {
-
-            throw new NotImplementedException();
-
+            List<long> cipher = new List<long>();
+            long c1 = power(alpha, k, q);
+            cipher.Add(c1);
+            long K = power(y, k, q);
+            long c2 = (K * m) % q;
+            cipher.Add(c2);
+            return cipher;
         }
-     
+
         public int Decrypt(int c1, int c2, int x, int q)
         {
+            ExtendedEuclid algorithm = new ExtendedEuclid();
 
-            throw new NotImplementedException();
+            long K = power(c1, x, q);
+            int res = algorithm.GetMultiplicativeInverse((int)K, q);
+
+            int M = (c2 * res) % q;
+
+            return M;
 
         }
+        public long power(int num, int p, int mod)
+        {
+            long total = 1;
+            for (int i = 0; i < p; i++)
+            {
+                total *= num;
+                if (total > mod)
+                {
+                    total %= mod;
+                }
+            }
+            return total;
+        }
+        /*public long powerhelp(int num, int powerr, int mod)
+        {
+            long s = 0, m, total = 1;
+            while (powerr > 5)
+            {
+                powerr = powerr - 5;
+                s = power(num, 5);
+                m = s % mod;
+                total *= m;
+                if (total > mod)
+                {
+                    total %= mod;
+                }
+            }
+            s = power(num, powerr);
+            m = s % mod;
+            total *= m;
+            total = total % mod;
+            return total;
+        }*/
     }
 }
